@@ -1,0 +1,23 @@
+public class PacienteHabitacion {
+
+    private int idAsignacion;
+    private int idPaciente;
+    private int idHabitacion;
+
+    public PacienteHabitacion() {}
+
+    public PacienteHabitacion(int idAsignacion, int idPaciente, int idHabitacion) {
+        this.idAsignacion = idAsignacion;
+        this.idPaciente = idPaciente;
+        this.idHabitacion = idHabitacion;
+    }
+
+    public int getIdAsignacion() { return idAsignacion; }
+    public void setIdAsignacion(int idAsignacion) { this.idAsignacion = idAsignacion; }
+
+    public int getIdPaciente() { return idPaciente; }
+    public void setIdPaciente(int idPaciente) { this.idPaciente = idPaciente; }
+
+    public int getIdHabitacion() { return idHabitacion; }
+    public void setIdHabitacion(int idHabitacion) { this.idHabitacion = idHabitacion; }
+}
