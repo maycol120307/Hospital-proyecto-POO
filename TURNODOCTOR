@@ -1,0 +1,16 @@
+import java.time.LocalDateTime;
+
+public class TurnoDoctor extends Turno {
+
+    private int idDoctor;
+
+    public TurnoDoctor() {}
+
+    public TurnoDoctor(int idTurno, LocalDateTime inicio, LocalDateTime fin, int idDoctor) {
+        super(idTurno, inicio, fin);
+        this.idDoctor = idDoctor;
+    }
+
+    public int getIdDoctor() { return idDoctor; }
+    public void setIdDoctor(int idDoctor) { this.idDoctor = idDoctor; }
+}
