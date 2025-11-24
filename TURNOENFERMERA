@@ -1,0 +1,16 @@
+import java.time.LocalDateTime;
+
+public class TurnoEnfermera extends Turno {
+
+    private int idEnfermera;
+
+    public TurnoEnfermera() {}
+
+    public TurnoEnfermera(int idTurno, LocalDateTime inicio, LocalDateTime fin, int idEnfermera) {
+        super(idTurno, inicio, fin);
+        this.idEnfermera = idEnfermera;
+    }
+
+    public int getIdEnfermera() { return idEnfermera; }
+    public void setIdEnfermera(int idEnfermera) { this.idEnfermera = idEnfermera; }
+}
