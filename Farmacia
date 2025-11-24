@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Farmacia {
+
+    private int idFarmacia;
+    private String nombre;
+
+    public ArrayList<Medicamento> medicamentos = new ArrayList<>();
+
+    public Farmacia() {}
+
+    public Farmacia(int idFarmacia, String nombre) {
+        this.idFarmacia = idFarmacia;
+        this.nombre = nombre;
+    }
+
+    public int getIdFarmacia() { return idFarmacia; }
+    public void setIdFarmacia(int idFarmacia) { this.idFarmacia = idFarmacia; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+}
