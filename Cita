@@ -1,0 +1,20 @@
+import java.time.LocalDateTime;
+
+public class Cita {
+
+    private int idCita;
+    private LocalDateTime fecha;
+
+    public Cita() {}
+
+    public Cita(int idCita, LocalDateTime fecha) {
+        this.idCita = idCita;
+        this.fecha = fecha;
+    }
+
+    public int getIdCita() { return idCita; }
+    public void setIdCita(int idCita) { this.idCita = idCita; }
+
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
+}
