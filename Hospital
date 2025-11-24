@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Hospital {
+
+    private int idHospital;
+    private String nombre;
+
+    public ArrayList<Doctor> doctores = new ArrayList<>();
+    public ArrayList<Paciente> pacientes = new ArrayList<>();
+    public ArrayList<Enfermera> enfermeras = new ArrayList<>();
+    public ArrayList<Medicamento> medicamentos = new ArrayList<>();
+    public ArrayList<Habitacion> habitaciones = new ArrayList<>();
+    public ArrayList<Farmacia> farmacias = new ArrayList<>();
+
+    public Hospital() {}
+
+    public Hospital(int idHospital, String nombre) {
+        this.idHospital = idHospital;
+        this.nombre = nombre;
+    }
+
+    public int getIdHospital() { return idHospital; }
+    public void setIdHospital(int idHospital) { this.idHospital = idHospital; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+}
