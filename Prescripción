@@ -1,0 +1,18 @@
+public class Prescripcion {
+
+    private int idPrescripcion;
+    private String descripcion;
+
+    public Prescripcion() {}
+
+    public Prescripcion(int idPrescripcion, String descripcion) {
+        this.idPrescripcion = idPrescripcion;
+        this.descripcion = descripcion;
+    }
+
+    public int getIdPrescripcion() { return idPrescripcion; }
+    public void setIdPrescripcion(int idPrescripcion) { this.idPrescripcion = idPrescripcion; }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+}
