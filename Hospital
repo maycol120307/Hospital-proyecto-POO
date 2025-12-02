@@ -4,8 +4,8 @@ public class Hospital {
 
     private int idHospital;
     private String nombre;
-    private String direccion;                 // Nuevo atributo
-    private List<String> habitacion;          // Nuevo atributo
+    private String direccion;                 
+    private List<String> habitacion;         
 
 
     public ArrayList<Doctor> doctores = new ArrayList<>();
