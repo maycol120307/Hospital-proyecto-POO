@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Doctor extends Persona {
 
     private String especialidad;
+    private int idDoctor;
+    private int persona_id;
 
     public ArrayList<TurnoDoctor> turnos = new ArrayList<>();
     public ArrayList<Cita> citas = new ArrayList<>();
