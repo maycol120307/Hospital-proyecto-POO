@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Enfermera extends Persona {
 
+    public ArrayList<idEnfermera> idEnfermera = new ArrayList<>();
     public ArrayList<TurnoEnfermera> turnos = new ArrayList<>();
 
     public Enfermera() {}
