@@ -1,12 +1,14 @@
 public abstract class Persona {
 
+    private int hospital_id;
     private int idPersona;
+    private int dni;
     private String nombre;
     private int edad;
 
     public Persona() {}
 
-    public Persona(int idPersona, String nombre, int edad) {
+    public Persona(int idPersona, String nombre, int edad, int dni, int hospital_id) {
         this.idPersona = idPersona;
         this.nombre = nombre;
         this.edad = edad;
