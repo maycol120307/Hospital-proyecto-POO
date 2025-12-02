@@ -2,15 +2,42 @@ import java.time.LocalDateTime;
 
 public class TurnoDoctor extends Turno {
 
-    private int idDoctor;
+    private int id_turno_doctor;
+    private int id_turno; 
+    private int doctor_id;
 
     public TurnoDoctor() {}
 
-    public TurnoDoctor(int idTurno, LocalDateTime inicio, LocalDateTime fin, int idDoctor) {
-        super(idTurno, inicio, fin);
-        this.idDoctor = idDoctor;
+    public TurnoDoctor(int id_turno_doctor, int id_turno, int doctor_id,
+                       LocalDateTime horaInicio, LocalDateTime horaFin) {
+
+        super(id_turno, horaInicio, horaFin);
+        this.id_turno_doctor = id_turno_doctor;
+        this.id_turno = id_turno;
+        this.doctor_id = doctor_id;
     }
 
-    public int getIdDoctor() { return idDoctor; }
-    public void setIdDoctor(int idDoctor) { this.idDoctor = idDoctor; }
+    public int getId_turno_doctor() { return id_turno_doctor; }
+    public void setId_turno_doctor(int id_turno_doctor) { this.id_turno_doctor = id_turno_doctor; }
+
+    public int getId_turno() { return id_turno; }
+    public void setId_turno(int id_turno) { this.id_turno = id_turno; }
+
+    public int getDoctor_id() { return doctor_id; }
+    public void setDoctor_id(int doctor_id) { this.doctor_id = doctor_id; }
+
+    @Override
+    public void asignarTurno(LocalDateTime inicio, LocalDateTime fin) {
+        setHoraInicio(inicio);
+        setHoraFin(fin);
+    }
+
+    @Override
+    public String toString() {
+        return "TurnoDoctor{id_turno_doctor=" + id_turno_doctor +
+                ", id_turno=" + id_turno +
+                ", doctor_id=" + doctor_id +
+                ", inicio=" + getHoraInicio() +
+                ", fin=" + getHoraFin() + "}";
+    }
 }
