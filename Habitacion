@@ -1,18 +1,83 @@
-public class Habitacion {.
+public class Habitacion {
 
-    private int idHabitacion;
-    private String tipo;
+    private int idHabitacion;   // ID de la habitación
+    private int hospital_id;    // ID del hospital al que pertenece
+    private String numero;      // Número de la habitación
+    private String tipo;        // Tipo (UCI, Normal, etc.)
+    private boolean disponible; // Estado: true = libre, false = ocupada
 
-    public Habitacion() {}
+    public Habitacion() {
+        this.disponible = true;  // Por defecto, una habitación nueva está libre
+    }
 
-    public Habitacion(int idHabitacion, String tipo) {
+    public Habitacion(int idHabitacion, int hospital_id, String numero, String tipo, boolean disponible) {
         this.idHabitacion = idHabitacion;
+        this.hospital_id = hospital_id;
+        this.numero = numero;
+        this.tipo = tipo;
+        this.disponible = disponible;
+    }
+
+    // Getters y setters
+
+    public int getIdHabitacion() {
+        return idHabitacion;
+    }
+
+    public void setIdHabitacion(int idHabitacion) {
+        this.idHabitacion = idHabitacion;
+    }
+
+    public int getHospital_id() {
+        return hospital_id;
+    }
+
+    public void setHospital_id(int hospital_id) {
+        this.hospital_id = hospital_id;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public int getIdHabitacion() { return idHabitacion; }
-    public void setIdHabitacion(int idHabitacion) { this.idHabitacion = idHabitacion; }
+    public boolean isDisponible() {
+        return disponible;
+    }
 
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public void ocupar() {
+        if (disponible) {
+            disponible = false;
+            System.out.println("La habitación " + numero + " ahora está ocupada.");
+        } else {
+            System.out.println("La habitación " + numero + " ya está ocupada.");
+        }
+    }
+
+    public void liberar() {
+        if (!disponible) {
+            disponible = true;
+            System.out.println("La habitación " + numero + " ahora está disponible.");
+        } else {
+            System.out.println("La habitación " + numero + " ya estaba libre.");
+        }
+    }
+    public boolean esDisponible() {
+        return disponible;
+    }
 }
