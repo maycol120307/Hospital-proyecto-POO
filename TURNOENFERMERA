@@ -2,15 +2,42 @@ import java.time.LocalDateTime;
 
 public class TurnoEnfermera extends Turno {
 
-    private int idEnfermera;
+    private int idTurnoEnfermera;
+    private int idTurno;
+    private int enfermera_id;
 
     public TurnoEnfermera() {}
 
-    public TurnoEnfermera(int idTurno, LocalDateTime inicio, LocalDateTime fin, int idEnfermera) {
-        super(idTurno, inicio, fin);
-        this.idEnfermera = idEnfermera;
+    public TurnoEnfermera(int idTurnoEnfermera, int idTurno, int enfermera_id,
+                          LocalDateTime horaInicio, LocalDateTime horaFin) {
+
+        super(idTurno, horaInicio, horaFin);
+        this.idTurnoEnfermera = idTurnoEnfermera;
+        this.idTurno = idTurno;
+        this.enfermera_id = enfermera_id;
     }
 
-    public int getIdEnfermera() { return idEnfermera; }
-    public void setIdEnfermera(int idEnfermera) { this.idEnfermera = idEnfermera; }
+    public int getIdTurnoEnfermera() { return idTurnoEnfermera; }
+    public void setIdTurnoEnfermera(int idTurnoEnfermera) { this.idTurnoEnfermera = idTurnoEnfermera; }
+
+    public int getIdTurno() { return idTurno; }
+    public void setIdTurno(int idTurno) { this.idTurno = idTurno; }
+
+    public int getEnfermera_id() { return enfermera_id; }
+    public void setEnfermera_id(int enfermera_id) { this.enfermera_id = enfermera_id; }
+
+    @Override
+    public void asignarTurno(LocalDateTime inicio, LocalDateTime fin) {
+        setHoraInicio(inicio);
+        setHoraFin(fin);
+    }
+
+    @Override
+    public String toString() {
+        return "TurnoEnfermera{idTurnoEnfermera=" + idTurnoEnfermera +
+                ", idTurno=" + idTurno +
+                ", enfermera_id=" + enfermera_id +
+                ", inicio=" + getHoraInicio() +
+                ", fin=" + getHoraFin() + "}";
+    }
 }
