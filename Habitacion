@@ -1,4 +1,4 @@
-public class Habitacion {
+public class Habitacion {.
 
     private int idHabitacion;
     private String tipo;
