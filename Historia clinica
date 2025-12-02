@@ -1,18 +1,58 @@
 public class HistoriaClinica {
 
-    private int idHistoria;
-    private String descripcion;
+    private int idHistoriaClinica;
+    private int paciente_id;
+    private String diagnostico;
+    private String tratamiento;
+
+    private Paciente paciente;
 
     public HistoriaClinica() {}
 
-    public HistoriaClinica(int idHistoria, String descripcion) {
-        this.idHistoria = idHistoria;
-        this.descripcion = descripcion;
+    public HistoriaClinica(int idHistoriaClinica, Paciente paciente) {
+        this.idHistoriaClinica = idHistoriaClinica;
+        this.paciente = paciente;
+        this.paciente_id = paciente.getIdPaciente();
+        this.diagnostico = "";
+        this.tratamiento = "";
     }
 
-    public int getIdHistoria() { return idHistoria; }
-    public void setIdHistoria(int idHistoria) { this.idHistoria = idHistoria; }
+    public int getIdHistoriaClinica() {
+        return idHistoriaClinica;
+    }
 
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    public void setIdHistoriaClinica(int idHistoriaClinica) {
+        this.idHistoriaClinica = idHistoriaClinica;
+    }
+
+    public int getPaciente_id() {
+        return paciente_id;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+        this.paciente_id = paciente.getIdPaciente();
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public String getTratamiento() {
+        return tratamiento;
+    }
+
+    public void registrarDiagnostico(String d) {
+        this.diagnostico = d;
+        System.out.println("Diagnóstico registrado para el paciente " + paciente.getNombre());
+    }
+
+    public void registrarTratamiento(String t) {
+        this.tratamiento = t;
+        System.out.println("Tratamiento registrado para el paciente " + paciente.getNombre());
+    }
 }
