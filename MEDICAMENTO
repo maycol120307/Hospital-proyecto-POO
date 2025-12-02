@@ -2,12 +2,14 @@ public class Medicamento {
 
     private int idMedicamento;
     private String nombre;
+    private String dosis;
 
     public Medicamento() {}
 
-    public Medicamento(int idMedicamento, String nombre) {
+    public Medicamento(int idMedicamento, String nombre, String dosis) {
         this.idMedicamento = idMedicamento;
         this.nombre = nombre;
+        this.dosis = dosis;
     }
 
     public int getIdMedicamento() { return idMedicamento; }
@@ -15,4 +17,14 @@ public class Medicamento {
 
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getDosis() { return dosis; }
+    public void setDosis(String dosis) { this.dosis = dosis; }
+
+    @Override
+    public String toString() {
+        return "Medicamento{idMedicamento=" + idMedicamento +
+                ", nombre='" + nombre + '\'' +
+                ", dosis='" + dosis + '\'' + '}';
+    }
 }
