@@ -3,23 +3,33 @@ import java.time.LocalDateTime;
 public class Turno {
 
     private int idTurno;
-    private LocalDateTime inicio;
-    private LocalDateTime fin;
+    private LocalDateTime horaInicio;
+    private LocalDateTime horaFin;
 
     public Turno() {}
 
-    public Turno(int idTurno, LocalDateTime inicio, LocalDateTime fin) {
+    public Turno(int idTurno, LocalDateTime horaInicio, LocalDateTime horaFin) {
         this.idTurno = idTurno;
-        this.inicio = inicio;
-        this.fin = fin;
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
     }
 
     public int getIdTurno() { return idTurno; }
     public void setIdTurno(int idTurno) { this.idTurno = idTurno; }
 
-    public LocalDateTime getInicio() { return inicio; }
-    public void setInicio(LocalDateTime inicio) { this.inicio = inicio; }
+    public LocalDateTime getHoraInicio() { return horaInicio; }
+    public void setHoraInicio(LocalDateTime horaInicio) { this.horaInicio = horaInicio; }
 
-    public LocalDateTime getFin() { return fin; }
-    public void setFin(LocalDateTime fin) { this.fin = fin; }
+    public LocalDateTime getHoraFin() { return horaFin; }
+    public void setHoraFin(LocalDateTime horaFin) { this.horaFin = horaFin; }
+
+    public void asignarTurno(LocalDateTime horaInicio, LocalDateTime horaFin) {
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+    }
+
+    @Override
+    public String toString() {
+        return "Turno{idTurno=" + idTurno + ", inicio=" + horaInicio + ", fin=" + horaFin + "}";
+    }
 }
