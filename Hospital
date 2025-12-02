@@ -1,22 +1,24 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hospital {
 
     private int idHospital;
     private String nombre;
     private String direccion;                 
-    private List<String> habitacion;         
+    private List<String> habitacion;  
 
-
+    // Composición: el hospital contiene objetos
     public ArrayList<Doctor> doctores = new ArrayList<>();
     public ArrayList<Paciente> pacientes = new ArrayList<>();
     public ArrayList<Enfermera> enfermeras = new ArrayList<>();
     public ArrayList<Medicamento> medicamentos = new ArrayList<>();
     public ArrayList<Habitacion> habitaciones = new ArrayList<>();
     public ArrayList<Farmacia> farmacias = new ArrayList<>();
+    public ArrayList<Turno> turnos = new ArrayList<>();  // Agregado para la composición con Turno
 
     public Hospital() {
-        this.habitacion = new ArrayList<>(); // Inicializar lista
+        this.habitacion = new ArrayList<>();
     }
 
     public Hospital(int idHospital, String nombre, String direccion) {
@@ -24,26 +26,17 @@ public class Hospital {
         this.nombre = nombre;
         this.direccion = direccion;
         this.habitacion = new ArrayList<>();
+    }
 
     public int getIdHospital() { return idHospital; }
     public void setIdHospital(int idHospital) { this.idHospital = idHospital; }
 
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
- public String getDireccion() { 
-        return direccion; 
-    }
 
-    public void setDireccion(String direccion) { 
-        this.direccion = direccion; 
-    }
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
 
-    public List<String> getHabitacion() { 
-        return habitacion; 
-    }
-
-    public void setHabitacion(List<String> habitacion) { 
-        this.habitacion = habitacion; 
-    }
+    public List<String> getHabitacion() { return habitacion; }
+    public void setHabitacion(List<String> habitacion) { this.habitacion = habitacion; }
 }
-
