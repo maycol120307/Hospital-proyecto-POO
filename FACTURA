@@ -1,0 +1,46 @@
+public class Factura {
+
+    private int idFactura;
+    private int paciente_id;
+    private LocalDateTime fecha;
+    private double monto;
+    private String descripcion;
+
+    public Factura() {}
+
+    public Factura(int idFactura, int paciente_id, LocalDateTime fecha, double monto, String descripcion) {
+        this.idFactura = idFactura;
+        this.paciente_id = paciente_id;
+        this.fecha = fecha;
+        this.monto = monto;
+        this.descripcion = descripcion;
+    }
+
+    public int getIdFactura() { return idFactura; }
+    public void setIdFactura(int idFactura) { this.idFactura = idFactura; }
+
+    public int getPaciente_id() { return paciente_id; }
+    public void setPaciente_id(int paciente_id) { this.paciente_id = paciente_id; }
+
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
+
+    public double getMonto() { return monto; }
+    public void setMonto(double monto) { this.monto = monto; }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    // Métodos UML
+    public double calcularTotal() {
+        return monto;
+    }
+
+    public void imprimir() {
+        System.out.println("Factura #" + idFactura);
+        System.out.println("Paciente ID: " + paciente_id);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Monto: " + monto);
+        System.out.println("Descripción: " + descripcion);
+    }
+}
