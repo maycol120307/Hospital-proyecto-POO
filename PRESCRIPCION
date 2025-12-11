@@ -1,0 +1,44 @@
+public class Prescripcion {
+
+    private int idPrescripcion;
+    private int doctor_id;
+    private int paciente_id;
+    private int medicamento_id;
+    private LocalDateTime fecha;
+    private String indicaciones;
+
+    public Prescripcion() {}
+
+    public Prescripcion(int idPrescripcion, int doctor_id, int paciente_id, int medicamento_id,
+                        LocalDateTime fecha, String indicaciones) {
+        this.idPrescripcion = idPrescripcion;
+        this.doctor_id = doctor_id;
+        this.paciente_id = paciente_id;
+        this.medicamento_id = medicamento_id;
+        this.fecha = fecha;
+        this.indicaciones = indicaciones;
+    }
+
+    public int getIdPrescripcion() { return idPrescripcion; }
+    public void setIdPrescripcion(int idPrescripcion) { this.idPrescripcion = idPrescripcion; }
+
+    public int getDoctor_id() { return doctor_id; }
+    public void setDoctor_id(int doctor_id) { this.doctor_id = doctor_id; }
+
+    public int getPaciente_id() { return paciente_id; }
+    public void setPaciente_id(int paciente_id) { this.paciente_id = paciente_id; }
+
+    public int getMedicamento_id() { return medicamento_id; }
+    public void setMedicamento_id(int medicamento_id) { this.medicamento_id = medicamento_id; }
+
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
+
+    public String getIndicaciones() { return indicaciones; }
+    public void setIndicaciones(String indicaciones) { this.indicaciones = indicaciones; }
+
+    // método del UML
+    public void agregarIndicacion(String i) {
+        this.indicaciones += "\n - " + i;
+    }
+}
