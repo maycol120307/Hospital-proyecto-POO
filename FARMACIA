@@ -1,0 +1,47 @@
+public class Farmacia {
+
+    private int idFarmacia;
+    private int idMedicamento;
+    private String nombre;
+    private String dosis;
+    private int stock;
+
+    private String horarioAtencion;
+    private String encargado;
+
+    public ArrayList<Medicamento> medicamentos = new ArrayList<>();
+
+    public Farmacia() {}
+
+    public Farmacia(int idFarmacia, int idMedicamento, String nombre, String dosis, int stock,
+                    String horarioAtencion, String encargado) {
+        this.idFarmacia = idFarmacia;
+        this.idMedicamento = idMedicamento;
+        this.nombre = nombre;
+        this.dosis = dosis;
+        this.stock = stock;
+        this.horarioAtencion = horarioAtencion;
+        this.encargado = encargado;
+    }
+
+    public int getIdFarmacia() { return idFarmacia; }
+    public void setIdFarmacia(int idFarmacia) { this.idFarmacia = idFarmacia; }
+
+    public int getIdMedicamento() { return idMedicamento; }
+    public void setIdMedicamento(int idMedicamento) { this.idMedicamento = idMedicamento; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getDosis() { return dosis; }
+    public void setDosis(String dosis) { this.dosis = dosis; }
+
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
+
+    public String getHorarioAtencion() { return horarioAtencion; }
+    public void setHorarioAtencion(String horarioAtencion) { this.horarioAtencion = horarioAtencion; }
+
+    public String getEncargado() { return encargado; }
+    public void setEncargado(String encargado) { this.encargado = encargado; }
+}
