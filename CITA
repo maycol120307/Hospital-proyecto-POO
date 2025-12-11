@@ -1,0 +1,44 @@
+public class Cita {
+
+    private int idCita;
+    private int paciente_id;
+    private int doctor_id;
+    private LocalDateTime fecha;
+    private String motivo;
+
+    public Cita() {}
+
+    public Cita(int idCita, int paciente_id, int doctor_id, LocalDateTime fecha, String motivo) {
+        this.idCita = idCita;
+        this.paciente_id = paciente_id;
+        this.doctor_id = doctor_id;
+        this.fecha = fecha;
+        this.motivo = motivo;
+    }
+
+    public int getIdCita() { return idCita; }
+    public void setIdCita(int idCita) { this.idCita = idCita; }
+
+    public int getPaciente_id() { return paciente_id; }
+    public void setPaciente_id(int paciente_id) { this.paciente_id = paciente_id; }
+
+    public int getDoctor_id() { return doctor_id; }
+    public void setDoctor_id(int doctor_id) { this.doctor_id = doctor_id; }
+
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
+
+    public String getMotivo() { return motivo; }
+    public void setMotivo(String motivo) { this.motivo = motivo; }
+
+    // Métodos del UML
+    public void programar(LocalDateTime fecha, String motivo) {
+        this.fecha = fecha;
+        this.motivo = motivo;
+    }
+
+    public void cancelar() {
+        this.fecha = null;
+        this.motivo = "CITA CANCELADA";
+    }
+}
